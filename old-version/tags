@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CFLAGS	Makefile	/^CFLAGS = -g -openmp$/;"	m
+CUFLAGS	Makefile	/^CUFLAGS =$/;"	m
+CUINC	Makefile	/^CUINC = -I.$/;"	m
+CUOBJS	Makefile	/^CUOBJS := $(addsuffix .o, $(basename $(CUSRC)))$/;"	m
+CUSRC	Makefile	/^CUSRC = $(wildcard *.cu)$/;"	m
+DEFS	Makefile	/^DEFS = -DGPU_TRACE$/;"	m
+EXEC	Makefile	/^EXEC = pme$/;"	m
+GPU_SYNC	gpu_spme.cu	13;"	d	file:
+GPU_THREADS	gpu_spme.cu	15;"	d	file:
+HARD_CODEDE_LDP	gpu_spme.cu	16;"	d	file:
+INC	Makefile	/^INC = -I.$/;"	m
+NVCC	Makefile	/^NVCC = nvcc -m64 -arch=sm_35 -G -Xcompiler "-g -pg -O2" $/;"	m
+OBJS	Makefile	/^OBJS := $(addsuffix .o, $(basename $(SRC)))$/;"	m
+P	spme.h	/^	double*	P;		$/;"	m	struct:_gpu_spme_t
+P	spme.h	/^    double *P;   \/* porder3*np *\/$/;"	m	struct:_spme_t
+PAD_FFT_LEN	spme.h	101;"	d
+PAD_FFT_LEN	test/g-fft.cu	6;"	d	file:
+PAD_LEN	spme.h	100;"	d
+SRC	Makefile	/^SRC = $(wildcard *.c) $/;"	m
+ULLI	gpu_spme.cu	/^typedef unsigned long long int	ULLI;$/;"	t	file:
+__SPME_H__	spme.h	2;"	d
+__SPME_KERNEL_H__	spme_kernel.h	2;"	d
+_gpu_spme_t	spme.h	/^typedef struct _gpu_spme_t$/;"	s
+_spme_t	spme.h	/^typedef struct _spme_t$/;"	s
+apply_influence	spme_kernel.c	/^void apply_influence (int dim, double *grid,$/;"	f
+atomicAdd	gpu_spme.cu	/^__device__ double atomicAdd(double* address, double val)$/;"	f
+bidx	spme.h	/^    int *bidx;    \/* nb * nb *nb *\/$/;"	m	struct:_gpu_spme_t
+bidx	spme.h	/^    int *bidx;    \/* nb * nb *nb *\/$/;"	m	struct:_spme_t
+box_size	spme.h	/^	double	box_size;$/;"	m	struct:_gpu_spme_t
+box_size	spme.h	/^    double box_size;$/;"	m	struct:_spme_t
+bwhandle	spme.h	/^    DFTI_DESCRIPTOR_HANDLE bwhandle;$/;"	m	struct:_spme_t
+compute_P	spme.c	/^static void compute_P (int dim, int porder,$/;"	f	file:
+compute_spline	spme.c	/^static void compute_spline (double xi, int dim, int porder,$/;"	f	file:
+compute_spme	spme.c	/^void compute_spme (spme_t *spme, double *pos, int nrhs,$/;"	f
+create_spme_engine	spme.c	/^void create_spme_engine (double xi, int dim, int porder,$/;"	f
+cubwplan	spme.h	/^	cufftHandle 	cubwplan[3];$/;"	m	struct:_gpu_spme_t
+cufwplan	spme.h	/^	cufftHandle		cufwplan[3];$/;"	m	struct:_gpu_spme_t
+custream	spme.h	/^	cudaStream_t	custream[3];$/;"	m	struct:_gpu_spme_t
+d_W	gpu_spme.cu	/^__constant__ double d_W[6*6];$/;"	v
+d_splineval	gpu_spme.cu	/^__constant__ double d_splineval[5];$/;"	v
+destroy_spme_engine	spme.c	/^void destroy_spme_engine (spme_t *spme)$/;"	f
+dev_influence_kernel	gpu_spme.cu	/^__device__ void dev_influence_kernel$/;"	f
+dev_influence_kernel_2	gpu_spme.cu	/^__device__ void dev_influence_kernel_2$/;"	f
+dev_interpolate_kernel	gpu_spme.cu	/^__device__ void dev_interpolate_kernel(int porder3, double *P, int *ind,$/;"	f
+dev_interpolate_kernel_2	gpu_spme.cu	/^__device__ void dev_interpolate_kernel_2(int porder3, double *P, int *ind,$/;"	f
+dev_scalar_recip	gpu_spme.cu	/^__device__ double dev_scalar_recip(double k, double xi, double aa, double ab)$/;"	f
+dev_spread_kernel	gpu_spme.cu	/^__device__ void dev_spread_kernel(int porder3, double *P, int *ind, $/;"	f
+dim	spme.h	/^	int 	dim;$/;"	m	struct:_gpu_spme_t
+dim	spme.h	/^    int dim;$/;"	m	struct:_spme_t
+fwhandle	spme.h	/^    DFTI_DESCRIPTOR_HANDLE fwhandle;$/;"	m	struct:_spme_t
+gpu_allocate	gpu_spme.cu	/^gpu_allocate(int ldm, int c, int np, double *f, double *v, double *pos)$/;"	f
+gpu_apply_influence	gpu_spme.cu	/^gpu_apply_influence (int dim, double *grid, int ld1, int ld2, $/;"	f
+gpu_compute_P	gpu_spme.cu	/^gpu_compute_P (int dim, int porder, double *pos, int np, double box_size,$/;"	f
+gpu_compute_spline	gpu_spme.cu	/^gpu_compute_spline (double xi, int dim, int porder, double box_size,$/;"	f
+gpu_compute_spme	gpu_spme.cu	/^gpu_compute_spme (gpu_spme_t *spme, double *h_pos, int nrhs,$/;"	f
+gpu_create_spme_engine	gpu_spme.cu	/^gpu_create_spme_engine (double xi, int dim, int porder, int np,$/;"	f
+gpu_deallocate	gpu_spme.cu	/^gpu_deallocate(double *f, double *v, double *pos)$/;"	f
+gpu_destroy_spme_engine	gpu_spme.cu	/^gpu_destroy_spme_engine (gpu_spme_t *spme)$/;"	f
+gpu_f	gpu_spme.cu	/^double* gpu_f;		\/\/ global input$/;"	v
+gpu_interpolate	gpu_spme.cu	/^gpu_interpolate (int np, int porder3, double *P, int ldP, int *ind, int ldind,$/;"	f
+gpu_pos	gpu_spme.cu	/^double* gpu_pos;$/;"	v
+gpu_spme_t	spme.h	/^} gpu_spme_t;$/;"	t	typeref:struct:_gpu_spme_t
+gpu_spread	gpu_spme.cu	/^gpu_spread (int np, int nb, int porder3, double *P, int ldP, int *ind,$/;"	f
+gpu_tab_W	gpu_spme.cu	/^static double gpu_tab_W[6][6*6]= {$/;"	v	file:
+gpu_tab_splines	gpu_spme.cu	/^static double gpu_tab_splines[6][5] = $/;"	v	file:
+gpu_v	gpu_spme.cu	/^double* gpu_v;		\/\/ global output$/;"	v
+grid	spme.h	/^	double* grid;$/;"	m	struct:_gpu_spme_t
+grid	spme.h	/^    double *grid;  $/;"	m	struct:_spme_t
+head	spme.h	/^    int *head;    \/* nb * nb *nb *\/$/;"	m	struct:_gpu_spme_t
+head	spme.h	/^    int *head;    \/* nb * nb *nb *\/$/;"	m	struct:_spme_t
+ind	spme.h	/^	int*	ind;$/;"	m	struct:_gpu_spme_t
+ind	spme.h	/^    int *ind;$/;"	m	struct:_spme_t
+influence_kernel	spme_kernel.c	/^inline void influence_kernel (double *grid, int ld3,$/;"	f
+interpolate	spme_kernel.c	/^void interpolate (int np, int porder3,$/;"	f
+interpolate_kernel	spme_kernel.c	/^inline void interpolate_kernel (int porder3, double *P, int *ind,$/;"	f
+kel_ap_influence_1	gpu_spme.cu	/^__global__ void kel_ap_influence_1(double *map, double *lm2, int dim, int ld1c,$/;"	f
+kel_ap_influence_2	gpu_spme.cu	/^__global__ void kel_ap_influence_2(double *map, $/;"	f
+kel_ap_influence_3	gpu_spme.cu	/^__global__ void kel_ap_influence_3(double *map, double *lm2, int dim, int ld1c,$/;"	f
+kel_ap_influence_4	gpu_spme.cu	/^__global__ void kel_ap_influence_4(double *map, double *lm2, int dim, int ld1c,$/;"	f
+kel_ap_influence_dp_1	gpu_spme.cu	/^__global__ void kel_ap_influence_dp_1(double *map, double *lm2, int dim, int ld1c,$/;"	f
+kel_ap_influence_dp_2	gpu_spme.cu	/^__global__ void kel_ap_influence_dp_2(double *map, double *lm2, int dim, int ld1c,$/;"	f
+kel_cp_P_1	gpu_spme.cu	/^__global__ void kel_cp_P_1(int np, int dim, double box_size, $/;"	f
+kel_cp_spline_1	gpu_spme.cu	/^__global__ void kel_cp_spline_1(double *map, int half_dim, double box_size)$/;"	f
+kel_cp_spline_2	gpu_spme.cu	/^__global__ void kel_cp_spline_2(double *map, int half_dim, double box_size)$/;"	f
+kel_cp_spline_3	gpu_spme.cu	/^__global__ void kel_cp_spline_3(double *map, int dim, Complex *b,$/;"	f
+kel_cp_spline_4	gpu_spme.cu	/^__global__ void kel_cp_spline_4(double *map, Complex *b, double *lm2,$/;"	f
+kel_cp_spline_5	gpu_spme.cu	/^__global__ void kel_cp_spline_5(double *map, Complex *b, double *lm2,$/;"	f
+kel_fft_scalling	gpu_spme.cu	/^__global__ void kel_fft_scalling(double *grid, int length, double factor)$/;"	f
+kel_interpolate	gpu_spme.cu	/^__global__ void kel_interpolate(int np, int porder3, double *P, int ldP, $/;"	f
+kel_interpolate_2	gpu_spme.cu	/^__global__ void kel_interpolate_2(int np, int porder3, double *P, int ldP,$/;"	f
+kel_spread_1	gpu_spme.cu	/^__global__ void kel_spread_1(int porder3, double *P, int ldP, $/;"	f
+lB0	spme.h	/^    double **lB0;$/;"	m	struct:_spme_t
+lB1	spme.h	/^    double **lB1;$/;"	m	struct:_spme_t
+lB2	spme.h	/^    double **lB2;$/;"	m	struct:_spme_t
+lB3	spme.h	/^    double **lB3;$/;"	m	struct:_spme_t
+lB4	spme.h	/^    double **lB4;$/;"	m	struct:_spme_t
+lB5	spme.h	/^    double **lB5;$/;"	m	struct:_spme_t
+ld1	spme.h	/^	int 	ld1;$/;"	m	struct:_gpu_spme_t
+ld1	spme.h	/^    int ld1;$/;"	m	struct:_spme_t
+ld2	spme.h	/^	int		ld2;$/;"	m	struct:_gpu_spme_t
+ld2	spme.h	/^    int ld2;$/;"	m	struct:_spme_t
+ld3	spme.h	/^	int		ld3;$/;"	m	struct:_gpu_spme_t
+ld3	spme.h	/^    int ld3;$/;"	m	struct:_spme_t
+ldP	spme.h	/^	int		ldP;$/;"	m	struct:_gpu_spme_t
+ldP	spme.h	/^    int ldP;     \/* = porder3  *\/$/;"	m	struct:_spme_t
+ldind	spme.h	/^	int		ldind;$/;"	m	struct:_gpu_spme_t
+ldind	spme.h	/^    int ldind;$/;"	m	struct:_spme_t
+lm2	spme.h	/^	double* lm2;$/;"	m	struct:_gpu_spme_t
+lm2	spme.h	/^    double *lm2;$/;"	m	struct:_spme_t
+long_options	main.c	/^const struct option long_options[] = {$/;"	v	typeref:struct:option
+main	main.c	/^int main (int argc, char **argv)$/;"	f
+main	test/g-fft.cu	/^int main(int argc, char *argv[]) {$/;"	f
+main	verify/com.c	/^int main(int argc, char *argv[])$/;"	f
+map	spme.h	/^	double*	map;$/;"	m	struct:_gpu_spme_t
+map	spme.h	/^    double *map;$/;"	m	struct:_spme_t
+nb	spme.h	/^    int nb;$/;"	m	struct:_gpu_spme_t
+nb	spme.h	/^    int nb;$/;"	m	struct:_spme_t
+next	spme.h	/^    int *next;    \/* np *\/$/;"	m	struct:_gpu_spme_t
+next	spme.h	/^    int *next;    \/* np *\/$/;"	m	struct:_spme_t
+np	spme.h	/^	int		np;$/;"	m	struct:_gpu_spme_t
+np	spme.h	/^    int np;$/;"	m	struct:_spme_t
+nthreads	spme.h	/^    int nthreads;$/;"	m	struct:_spme_t
+pidx	spme.h	/^    int *pidx;    \/* np *\/$/;"	m	struct:_gpu_spme_t
+pidx	spme.h	/^    int *pidx;    \/* np *\/$/;"	m	struct:_spme_t
+porder	spme.h	/^	int		porder;$/;"	m	struct:_gpu_spme_t
+porder	spme.h	/^    int porder;$/;"	m	struct:_spme_t
+pos	spme.h	/^    double *pos;$/;"	m	struct:_spme_t
+print_version	main.c	/^static void print_version (char *call)$/;"	f	file:
+qbuf	spme.h	/^    double **qbuf;$/;"	m	struct:_spme_t
+read_xyz	main.c	/^static int read_xyz (char *xyz_file, double **pos, int *np, double *L)$/;"	f	file:
+scalar_recip	spme.c	/^static double scalar_recip (double k, double xi, double aa, double ab)$/;"	f	file:
+short_options	main.c	/^const char *const short_options = ":hv";$/;"	v
+sizeb	spme.h	/^    int sizeb;$/;"	m	struct:_gpu_spme_t
+sizeb	spme.h	/^    int sizeb;$/;"	m	struct:_spme_t
+spme_t	spme.h	/^} spme_t;$/;"	t	typeref:struct:_spme_t
+spread	spme_kernel.c	/^void spread (int np, int nb, int *head, int *next,$/;"	f
+spread_kernel	spme_kernel.c	/^inline void spread_kernel (int porder3, double *P, int *ind,$/;"	f
+tab_W	spme.c	/^static double tab_W[6][6*6]= {$/;"	v	file:
+tab_splines	spme.c	/^static double tab_splines[6][5] =$/;"	v	file:
+usage	main.c	/^static void usage (char *call)$/;"	f	file:
+version_info	main.c	/^const char *version_info = "0.1.0";$/;"	v
+xi	spme.h	/^	double 	xi;$/;"	m	struct:_gpu_spme_t
+xi	spme.h	/^    double xi; $/;"	m	struct:_spme_t

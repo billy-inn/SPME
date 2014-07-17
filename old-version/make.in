@@ -1,0 +1,16 @@
+# CC  = /opt/intel/bin/icc
+CC = icc
+
+BLAS_LIBDIR = /opt/intel/mkl/lib/intel64
+BLAS_INCDIR = /opt/intel/mkl/include
+BLAS_LIBS = -lmkl_core           \
+            -lmkl_intel_lp64     \
+            -lmkl_intel_thread   \
+            -liomp5				 \
+			-lirc
+
+OMP_LIBDIR = /opt/intel/lib/intel64/
+
+CUDA_INCDIR = /usr/local/cuda-5.5/include/
+CUDA_LIBDIR = /usr/local/cuda-5.5/lib64/
+CUDA_LIBS = -lcudart -lcufft -lcudadevrt

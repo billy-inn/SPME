@@ -1,0 +1,6 @@
+To run the code:
+./pme --xyz data/N1000_Phi0.1.xyz --dim 128 --porder 6
+
+--xyz is the input particle configurations
+--dim is the PME mesh size
+--porder is the interpolation order
